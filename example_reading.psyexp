@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2021.2.0">
+  <Settings>
+    <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
+    <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
+    <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expName, expInfo['participant_name'],expInfo['participant_number'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="False" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'participant_name': 'test', 'participant_number': '001'}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="HTML path" updates="None" val="" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="" valType="str"/>
+    <Param name="Monitor" updates="None" val="myMonitor" valType="str"/>
+    <Param name="Resources" updates="None" val="[]" valType="fileList"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Save hdf5 file" updates="None" val="False" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="0" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="pix" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="[1680, 1050]" valType="code"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[0.5,0.5,0.5]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="elAddress" updates="None" val="100.1.1.1" valType="str"/>
+    <Param name="elDataFiltering" updates="None" val="FILTER_LEVEL_2" valType="str"/>
+    <Param name="elLiveFiltering" updates="None" val="FILTER_LEVEL_OFF" valType="str"/>
+    <Param name="elModel" updates="None" val="EYELINK 1000 DESKTOP" valType="str"/>
+    <Param name="elPupilAlgorithm" updates="None" val="ELLIPSE_FIT" valType="str"/>
+    <Param name="elPupilMeasure" updates="None" val="PUPIL_AREA" valType="str"/>
+    <Param name="elSampleRate" updates="None" val="1000" valType="num"/>
+    <Param name="elSimMode" updates="None" val="False" valType="bool"/>
+    <Param name="elTrackEyes" updates="None" val="RIGHT_EYE" valType="str"/>
+    <Param name="elTrackingMode" updates="None" val="PUPIL_CR_TRACKING" valType="str"/>
+    <Param name="expName" updates="None" val="example_reading" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="eyetracker" updates="None" val="None" valType="str"/>
+    <Param name="gpAddress" updates="None" val="127.0.0.1" valType="str"/>
+    <Param name="gpPort" updates="None" val="4242" valType="num"/>
+    <Param name="logging level" updates="None" val="debug" valType="code"/>
+    <Param name="mgBlink" updates="None" val="MIDDLE_BUTTON" valType="list"/>
+    <Param name="mgMove" updates="None" val="CONTINUOUS" valType="str"/>
+    <Param name="mgSaccade" updates="None" val="0.5" valType="num"/>
+    <Param name="tbLicenseFile" updates="None" val="" valType="str"/>
+    <Param name="tbModel" updates="None" val="" valType="str"/>
+    <Param name="tbSampleRate" updates="None" val="60" valType="num"/>
+    <Param name="tbSerialNo" updates="None" val="" valType="str"/>
+  </Settings>
+  <Routines>
+    <Routine name="ET_setup">
+      <CodeComponent name="code_et_setup">
+        <Param name="Before Experiment" updates="constant" val="import pylink&amp;#10;from EyeLinkCoreGraphicsPsychoPy import EyeLinkCoreGraphicsPsychoPy&amp;#10;from psychopy import monitors&amp;#10;from PIL import Image&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="# open a connection to the tracker&amp;#10;tk = pylink.EyeLink('100.1.1.1')&amp;#10;&amp;#10;# Open an EDF data file on the Host and write a file header&amp;#10;# The file name should not exceeds 8 characters&amp;#10;dataFileName = 'tempName.EDF'&amp;#10;tk.openDataFile(dataFileName)&amp;#10;&amp;#10;# define screen dimensions&amp;#10;scnWidth, scnHeight = (1680, 1050)&amp;#10;&amp;#10;#open a window; set winType='pyglet' &amp;#10;# for some strange reason PsychoPy Builder starts with a win useFBO = True&amp;#10;win = visual.Window((scnWidth, scnHeight), fullscr=True, monitor='myMonitor', &amp;#10;                    winType='pyglet', color=[0.5,0.5,0.5], units='pix', allowStencil=True, &amp;#10;                    allowGUI = False, useFBO = False)&amp;#10;&amp;#10;&amp;#10;win.mouseVisible = False&amp;#10;&amp;#10;&amp;#10;### function run when quit button is pressed&amp;#10;def shutDownFunc(): &amp;#10;   # close the EDF data file and put the tracker in idle mode&amp;#10;   tk.setOfflineMode()&amp;#10;   pylink.pumpDelay(100)&amp;#10;   tk.closeDataFile() &amp;#10;   # download EDF file to Display PC and put it in local folder ('edfData')&amp;#10;   msg = 'EDF data is transfering from EyeLink Host PC...'&amp;#10;   edfTransfer = visual.TextStim(win, text=msg, color='black')&amp;#10;   edfTransfer.draw()&amp;#10;   win.flip()&amp;#10;   pylink.pumpDelay(500)&amp;#10;   # make sure the 'edfData' folder is there, create one if not&amp;#10;   dataFolder = os.getcwd() + os.sep +'edfData'&amp;#10;   if not os.path.exists(dataFolder):&amp;#10;        os.makedirs(dataFolder)&amp;#10;       &amp;#10;   tk.receiveDataFile(dataFileName, 'edfData' + os.sep + dataFileName)&amp;#10;   # close the connection to tracker&amp;#10;   tk.close()&amp;#10;&amp;#10;   # renaming edf file&amp;#10;   os.rename('edfData' + os.sep + dataFileName,'edfData' + os.sep + expInfo['participant_name'] +'_aborted.EDF')&amp;#10;   core.quit()&amp;#10;&amp;#10;&amp;#10;# since the standard quit key &quot;esc&quot; would interfer with the recalibration routine&amp;#10;#event.globalKeys.add(key='q', func=core.quit, name='shutdown')&amp;#10;event.globalKeys.add(key='q', func=shutDownFunc, name='shutdown')&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_et_setup" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="ET_calibration">
+      <CodeComponent name="code_et_cali">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="&amp;#10;# set up a custom graphics envrionment (EyeLinkCoreGraphicsPsychopy) for calibration&amp;#10;genv = EyeLinkCoreGraphicsPsychoPy(tk, win)&amp;#10;&amp;#10;# Beeps to play during calibration, validation and drift correction&amp;#10;# parameters: target, good, error&amp;#10;#     target -- sound to play when target moves&amp;#10;#     good -- sound to play on successful operation&amp;#10;#     error -- sound to play on failure or interruption&amp;#10;# Each parameter could be ''--default sound, 'off'--no sound, or a wav file&amp;#10;genv.setCalibrationSounds('off', 'off', 'off')&amp;#10;&amp;#10;# calibration target size &amp;#10;genv.setTargetSize(20)&amp;#10;&amp;#10;# configure the calibration target, could be a 'circle', &amp;#10;genv.setTargetType('circle')&amp;#10;&amp;#10;# open the graphics env&amp;#10;pylink.openGraphicsEx(genv)&amp;#10;&amp;#10;# put the tracker in idle mode before we change its parameters&amp;#10;tk.setOfflineMode()&amp;#10;pylink.pumpDelay(100)&amp;#10;&amp;#10;# IMPORTANT: send screen resolution to the tracker&amp;#10;# see Eyelink Installation Guide, Section 8.4: Customizing Your PHYSICAL.INI Settings&amp;#10;tk.sendCommand(&quot;screen_pixel_coords = 0 0 %d %d&quot; % (scnWidth-1, scnHeight-1))&amp;#10;# save screen resolution in EDF data, so Data Viewer can correctly load experimental graphics&amp;#10;tk.sendMessage(&quot;DISPLAY_COORDS = 0 0 %d %d&quot; % (scnWidth-1, scnHeight-1))&amp;#10;# sampling rate, 250, 500, 1000, or 2000; this command is not supported for EyeLInk II/I trackers&amp;#10;tk.sendCommand(&quot;sample_rate 500&quot;)&amp;#10;# detect eye events based on &quot;GAZE&quot; (or &quot;HREF&quot;) data&amp;#10;tk.sendCommand(&quot;recording_parse_type = GAZE&quot;)&amp;#10;# Saccade detection thresholds: 0-&gt; standard/coginitve, 1-&gt; sensitive/psychophysiological&amp;#10;# see Eyelink User Manual, Section 4.3: EyeLink Parser Configuration&amp;#10;tk.sendCommand(&quot;select_parser_configuration 0&quot;) &amp;#10;# choose a calibration type, H3, HV3, HV5, HV13 (HV = horiztonal/vertical), &amp;#10;# tk.setCalibrationType('HV9') also works, see the Pylink manual&amp;#10;tk.sendCommand(&quot;calibration_type = HV5&quot;) &amp;#10;&amp;#10;tk.sendMessage('subject_nr %s' % expInfo['participant_number'])&amp;#10;# tracker hardware, 1-EyeLink I, 2-EyeLink II, 3-Newer models (1000/1000Plus/Portable DUO)&amp;#10;hardware_ver = tk.getTrackerVersion()&amp;#10;# tracking software version&amp;#10;software_ver = 0&amp;#10;if hardware_ver == 3:&amp;#10;    tvstr = tk.getTrackerVersionString()&amp;#10;    vindex = tvstr.find(&quot;EYELINK CL&quot;)&amp;#10;    software_ver = float(tvstr.split()[-1])&amp;#10;&amp;#10;# sample and event data saved in EDF data file&amp;#10;# see sectin 4.6 of the EyeLink user manual, software version &gt; 4 adds remote tracking (and thus HTARGET)&amp;#10;tk.sendCommand(&quot;file_event_filter = LEFT,RIGHT,FIXATION,SACCADE,BLINK,MESSAGE,BUTTON,INPUT&quot;)&amp;#10;if software_ver &gt;= 4:&amp;#10;    tk.sendCommand(&quot;file_sample_data  = LEFT,RIGHT,GAZE,GAZERES,PUPIL,HREF,AREA,STATUS,HTARGET,INPUT&quot;)&amp;#10;else:&amp;#10;    tk.sendCommand(&quot;file_sample_data  = LEFT,RIGHT,GAZE,GAZERES,PUPIL,HREF,AREA,STATUS,INPUT&quot;)&amp;#10;&amp;#10;# sample and event data available over the link    &amp;#10;tk.sendCommand(&quot;link_event_filter = LEFT,RIGHT,FIXATION,FIXUPDATE,SACCADE,BLINK,BUTTON,INPUT&quot;)&amp;#10;if software_ver &gt;= 4:&amp;#10;    tk.sendCommand(&quot;link_sample_data  = LEFT,RIGHT,GAZE,GAZERES,PUPIL,HREF,AREA,STATUS,HTARGET,INPUT&quot;)&amp;#10;else:&amp;#10;    tk.sendCommand(&quot;link_sample_data  = LEFT,RIGHT,GAZE,GAZERES,PUPIL,HREF,AREA,STATUS,INPUT&quot;)&amp;#10;&amp;#10;&amp;#10;# instructions for calibration &amp;#10;msg = visual.TextStim(win, text='Press ENTER twice\n' + &amp;#10;                                'to start eye-tracker setup')&amp;#10;msg.draw()&amp;#10;&amp;#10;win.flip()&amp;#10;&amp;#10;event.waitKeys()&amp;#10;&amp;#10;# set up the camera and calibrate the tracker&amp;#10;tk.doTrackerSetup()&amp;#10;&amp;#10;# hiding the mouse&amp;#10;mouse.setPos(newPos=(10000,-10000))&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_et_cali" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="sentence">
+      <TextComponent name="text_sent">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Courier New" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="22" valType="code"/>
+        <Param name="name" updates="None" val="text_sent" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$sent_var" valType="extendedStr"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="1520" valType="code"/>
+      </TextComponent>
+      <PolygonComponent name="fix_end_point">
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0.5,0.5,0.5]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[-1.000,-1.000,-1.000]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="5" valType="code"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="name" updates="None" val="fix_end_point" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(760, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(16,16)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="vertices" updates="constant" val="" valType="list"/>
+      </PolygonComponent>
+      <KeyboardComponent name="key_resp">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <CodeComponent name="code_et_msg_finished">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="text_sent.alignText='left'&amp;#10;def sendMSGsentStart():&amp;#10;    tk.sendMessage('onset_sentence %d' %trial_index_var)&amp;#10;win.callOnFlip(sendMSGsentStart)&amp;#10;&amp;#10;# hiding the mouse&amp;#10;mouse.setPos(newPos=(10000,-10000))" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if len(key_resp.keys)&gt;0:&amp;#10;    tk.sendMessage('finished_reading  %d' % trial_index_var)" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_et_msg_finished" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="question">
+      <TextComponent name="text_quest">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Courier New" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="22" valType="code"/>
+        <Param name="name" updates="None" val="text_quest" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 100)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$quest_var" valType="extendedStr"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="800" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_ans_1">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Courier New" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="22" valType="code"/>
+        <Param name="name" updates="None" val="text_ans_1" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 50)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$ans_1_var" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="700" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_ans_2">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Courier New" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="22" valType="code"/>
+        <Param name="name" updates="None" val="text_ans_2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$ans_2_var" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="700" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_quest">
+        <Param name="allowedKeys" updates="constant" val="'left','right'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_quest" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <CodeComponent name="code_align_quest">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="text_quest.alignText='left'&amp;#10;text_ans_1.alignText='left'&amp;#10;text_ans_2.alignText='left'&amp;#10;&amp;#10;# hiding the mouse&amp;#10;mouse.setPos(newPos=(10000,-10000))&amp;#10;&amp;#10;def sendMSGquestStart():&amp;#10;    tk.sendMessage('onset_question %d' %trial_index_var)&amp;#10;win.callOnFlip(sendMSGquestStart)" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if len(key_resp_quest.keys)&gt;0:&amp;#10;    tk.sendMessage('response %s' %key_resp_quest.keys)" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_align_quest" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="ET_stop_record">
+      <CodeComponent name="code_et_stop_record">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# stop recording&amp;#10;tk.sendMessage('stop_recording_trial_index %d' % (trials.thisN +1))&amp;#10;tk.stopRecording() " valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_et_stop_record" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="ET_exit">
+      <CodeComponent name="code_et_exit">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="# close the EDF data file and put the tracker in idle mode&amp;#10;tk.setOfflineMode()&amp;#10;pylink.pumpDelay(100)&amp;#10;tk.closeDataFile()&amp;#10;&amp;#10;# download EDF file to Display PC and put it in local folder ('edfData')&amp;#10;msg = 'EDF data is transfering from EyeLink Host PC...'&amp;#10;edfTransfer = visual.TextStim(win, text=msg, color='black')&amp;#10;edfTransfer.draw()&amp;#10;win.flip()&amp;#10;pylink.pumpDelay(500)&amp;#10;&amp;#10;# make sure the 'edfData' folder is there, create one if not&amp;#10;dataFolder = os.getcwd() + os.sep +'edfData'&amp;#10;if not os.path.exists(dataFolder): &amp;#10;    os.makedirs(dataFolder)&amp;#10;tk.receiveDataFile(dataFileName, 'edfData' + os.sep + dataFileName)&amp;#10;&amp;#10;# close the connection to tracker&amp;#10;tk.close()&amp;#10;&amp;#10;# renaming edf file&amp;#10;os.rename('edfData' + os.sep + dataFileName,'edfData' + os.sep + expInfo['participant_name'] +'.EDF')" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_et_exit" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="thanks">
+      <TextComponent name="text_end">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Courier New" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="22" valType="code"/>
+        <Param name="name" updates="None" val="text_end" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Thanks!" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="instructions">
+      <TextComponent name="text_instruc">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Courier New" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="22" valType="code"/>
+        <Param name="name" updates="None" val="text_instruc" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Dear participant,&amp;#10;&amp;#10;During the following experiment we will record your eye movements while you are reading ten simple sentences. Before we can start we will have to calibrate the eye tracker. For this purpose you will have to follow the little point that will appear at various positions of the screen. Please direct your gaze at the point until it disappears. It is not important that you do this quickly but it is crucial that you do this as accurately as possible. &amp;#10;&amp;#10;1.) Before each trial a little dot will appear at the left side of the screen. Please look at it and press the space bar as soon as you are ready; the sentence will appear.  &amp;#10;&amp;#10;2.) Read the sentence at your usual reading speed and fixate the dot at the right side of the screen. Press the space bar again to indicate that you have finished reading.&amp;#10;&amp;#10;3.) A very simple question concerning the content of the sentence will appear. For option a) press the arrow key left; for option b) press the arrow key right.&amp;#10;&amp;#10;Press the space bar to start the experiment." valType="extendedStr"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="1000" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_instruction_go">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_instruction_go" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <CodeComponent name="code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="text_instruc.alignText='left'&amp;#10;# initiate a mouse instance just to hide it&amp;#10;mouse = event.Mouse(win=win)&amp;#10;# hiding the mouse&amp;#10;mouse.setPos(newPos=(10000,-10000))" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="ET_screenshot">
+      <CodeComponent name="code_et_screen">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="&amp;#10;# draw stimuli in the back buffer&amp;#10;text_sent.draw()&amp;#10;fix_end_point.draw()&amp;#10;# create a screenshot so we can use it during analyses to overlay the gaze&amp;#10;# taking a screenshot can be time consuming, not recommended for timing critical tasks&amp;#10;if not os.path.exists('images'): &amp;#10;    os.mkdir('images')&amp;#10;    &amp;#10;screenshot = 'images' + os.sep +  'trial_%d.png' % trial_index_var&amp;#10;win.getMovieFrame('back')&amp;#10;win.saveMovieFrames(screenshot)" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_et_screen" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="ET_screenshot2">
+      <CodeComponent name="code_2">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="&amp;#10;# draw stimuli in the back buffer&amp;#10;text_quest.draw()&amp;#10;text_ans_1.draw()&amp;#10;text_ans_2.draw()&amp;#10;# create a screenshot so we can use it during analyses to overlay the gaze&amp;#10;# taking a screenshot can be time consuming, not recommended for timing critical tasks&amp;#10;if not os.path.exists('images'): &amp;#10;    os.mkdir('images')&amp;#10;    &amp;#10;screenshot = 'images' + os.sep +  'trial_q_%d.png' % trial_index_var&amp;#10;win.getMovieFrame('back')&amp;#10;win.saveMovieFrames(screenshot)" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_2" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="ET_backdrop">
+      <CodeComponent name="code_et_backdrop">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# put the tracker in idle mode before we start recording&amp;#10;tk.setOfflineMode()&amp;#10;pylink.pumpDelay(100)&amp;#10;&amp;#10;&amp;#10;# backdrop image on the Host screen&amp;#10;# this is SLOW and may cause timing problems for some tasks &amp;#10;# open image with the PIL Image moduel&amp;#10;im = Image.open('images' + os.sep + 'trial_%d.png' %trial_index_var) &amp;#10;#im = Image.open('images' + os.sep + 'static.png') &amp;#10;w,h = im.size&amp;#10;pixels = im.load()&amp;#10;# use the list comprehension trick to convert all image pixels into a &lt;pixel&gt; format&amp;#10;# supported by the Host PC, pixels = [line1, ...lineH], line = [pix1,...pixW], pix=(R,G,B)&amp;#10;pixels_2transfer = [[pixels[i,j] for i in range(w)] for j in range(h)]&amp;#10;tk.sendCommand('clear_screen 0') # clear the host screen&amp;#10;# call the bitmapBackdrop() command to show backdrop image on the Host&amp;#10;# arguments: width, height, pixel, crop_x, crop_y, crop_width, crop_height, x, y on Host, option&amp;#10;#tk.bitmapBackdrop(w, h, pixels_2transfer, 0, 0,w,h,0,0,pylink.BX_MAXCONTRAST)&amp;#10;tk.bitmapSaveAndBackdrop(w, h, pixels_2transfer, 0, 0, w, h, 'tmp_img', 'images'+ os.sep ,&amp;#10;pylink.SV_NOREPLACE, 0, 0, pylink.BX_MAXCONTRAST)&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_et_backdrop" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="ET_drift">
+      <CodeComponent name="code_et_drift">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="&amp;#10;# drift check&amp;#10;# the doDriftCorrect() function requires target position in integers&amp;#10;# the last two arguments: draw_target (1-default, 0-user draw the target then call this function)&amp;#10;#                         allow_setup (1-press ESCAPE to recalibrate, 0-not allowed) &amp;#10;try:&amp;#10;    err = tk.doDriftCorrect(88,525, 1, 1)&amp;#10;except:&amp;#10;        tk.doTrackerSetup()&amp;#10;        tk.doDriftCorrect(88,525,1,1)&amp;#10;&amp;#10;&amp;#10;# send the standard &quot;TRIALID&quot; message to mark the start of a trial&amp;#10;# see Data Viewer User Manual, Section 7: Protocol for EyeLink Data to Viewer Integration&amp;#10;tk.sendMessage('TRIALID %d' % trial_index_var)&amp;#10;tk.sendMessage('stimulus %s'% sent_var)&amp;#10;# record_status_message : show some info on the Host PC - OPTIONAL&amp;#10;# here we show how many trial has been tested&amp;#10;#tk.sendCommand(&quot;record_status_message 'TRIAL number %s'&quot;% trial_index_var)&amp;#10;tk.sendCommand(&quot;record_status_message 'TRIAL number %s out of 10'&quot;% (trials.thisN +1))&amp;#10;&amp;#10;# start recording    &amp;#10;# arguments: sample_to_file, events_to_file, sample_over_link, event_over_link (1-yes, 0-no)&amp;#10;err = tk.startRecording(1, 1, 1, 1)&amp;#10;pylink.pumpDelay(100)  # wait for 100 ms to cache some samples&amp;#10;tk.sendMessage('start_trial_index %d' % (trials.thisN+1))&amp;#10;tk.sendMessage('start_stim_id %d' % trial_index_var)&amp;#10;&amp;#10;&amp;#10;# hiding the mouse&amp;#10;mouse.setPos(newPos=(10000,-10000))&amp;#10;&amp;#10;win.flip()" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_et_drift" valType="code"/>
+      </CodeComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="ET_setup"/>
+    <Routine name="instructions"/>
+    <Routine name="ET_calibration"/>
+    <LoopInitiator loopType="TrialHandler" name="trials">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('trial_index_var', 1), ('sent_var', &quot;Tom's father used to go fishing with his kids until they became vegetarian.&quot;), ('quest_var', 'The kids went: '), ('ans_1_var', 'a) fishing.'), ('ans_2_var', 'b) hiking.')]), OrderedDict([('trial_index_var', 2), ('sent_var', 'The strange old lady who usually feeds the cats suddenly disappeared.'), ('quest_var', 'The old lady feeds:'), ('ans_1_var', 'a) pigeons.'), ('ans_2_var', 'b) cats.')]), OrderedDict([('trial_index_var', 3), ('sent_var', 'Several penguins escaped their cages in the zoo and went for a walk in the park.'), ('quest_var', 'The penguins went to:'), ('ans_1_var', 'a) a park.'), ('ans_2_var', 'b) a lake.')]), OrderedDict([('trial_index_var', 4), ('sent_var', &quot;Even as Joe's drug addiction became obvious, he denied having a problem.&quot;), ('quest_var', 'Did Joe go to rehab?'), ('ans_1_var', 'a) Yes.'), ('ans_2_var', 'b) No.')]), OrderedDict([('trial_index_var', 5), ('sent_var', 'Although I really hated mathematics in school, I became a decent engineer. '), ('quest_var', 'I hated:'), ('ans_1_var', 'a) math.'), ('ans_2_var', 'b) physics.')]), OrderedDict([('trial_index_var', 6), ('sent_var', 'After the terror attack, heavily armed soldiers patrolled the streets of Paris.'), ('quest_var', 'Who was heavily armed?'), ('ans_1_var', 'a) Policemen.'), ('ans_2_var', 'b) Soldiers.')]), OrderedDict([('trial_index_var', 7), ('sent_var', 'Some say that the internet was initially created for sharing pictures of cute cats.'), ('quest_var', 'What is your opinion? '), ('ans_1_var', 'a) No way, I am a dog person.'), ('ans_2_var', 'b) True fact, cats rule the world. ')]), OrderedDict([('trial_index_var', 8), ('sent_var', 'Mark and Shelley found an apartment in one of the fancy neighborhoods of London.'), ('quest_var', 'The neighborhood is:'), ('ans_1_var', 'a) shabby.'), ('ans_2_var', 'b) fancy.')]), OrderedDict([('trial_index_var', 9), ('sent_var', &quot;Long term unemployment can damage a person's self esteem, particularly for young people. &quot;), ('quest_var', &quot;Young people's self-esteem is:&quot;), ('ans_1_var', 'a) easily damaged.'), ('ans_2_var', 'b) indestructible.')]), OrderedDict([('trial_index_var', 10), ('sent_var', 'They observed that fathers of daughters show a tendency for protective behavior.'), ('quest_var', 'Who shows protective behavior?'), ('ans_1_var', 'a) Fathers.'), ('ans_2_var', 'b) Mothers.')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="example_sentences.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="trials" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="ET_backdrop"/>
+    <Routine name="ET_drift"/>
+    <Routine name="sentence"/>
+    <Routine name="question"/>
+    <Routine name="ET_stop_record"/>
+    <LoopTerminator name="trials"/>
+    <Routine name="ET_exit"/>
+    <Routine name="thanks"/>
+  </Flow>
+</PsychoPy2experiment>

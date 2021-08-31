@@ -1,0 +1,328 @@
+9.7662 	INFO 	Loaded monitor calibration from ['2020_12_11 11:21']
+10.5991 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0.5, 0.5, 0.5]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000026C4603D198>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000026C4619B048>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=-1, size=array([1680, 1050]), stencilBits=0, stereo=False, units='pix', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.5994 	EXP 	window1: mouseVisible = True
+10.5994 	EXP 	window1: recordFrameIntervals = False
+10.7654 	EXP 	window1: recordFrameIntervals = True
+10.9488 	DEBUG 	Screen (-1) actual frame rate measured at 59.99
+10.9489 	EXP 	window1: recordFrameIntervals = False
+11.2422 	INFO 	keyboard.Keyboard is using ptb backend.
+11.2819 	INFO 	Loaded monitor calibration from ['2020_12_11 11:21']
+11.9001 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=True, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0.5, 0.5, 0.5]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000026C4603D198>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000026C444D92E8>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1680, 1050]), stencilBits=8, stereo=False, units='pix', useFBO=False, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+11.9004 	EXP 	window1: mouseVisible = True
+11.9005 	EXP 	window1: mouseVisible = False
+11.9005 	EXP 	Added new global key event: shutdown
+12.0061 	EXP 	Created text_instruc = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Courier New', fontFiles=[], height=22, italic=False, languageStyle='LTR', name='text_instruc', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=1000)
+12.0061 	INFO 	keyboard.Keyboard is using ptb backend.
+12.0066 	EXP 	Created text_sent = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Courier New', fontFiles=[], height=22, italic=False, languageStyle='LTR', name='text_sent', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='pix', win=Window(...), wrapWidth=1520)
+12.0118 	EXP 	Created fix_end_point = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1.0, fillColor=array([0.5, 0.5, 0.5]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=5, name='fix_end_point', opacity=1, ori=0.0, pos=array([760.,   0.]), size=array([16., 16.]), units='pix', vertices=ndarray(...), win=Window(...), windingRule=None)
+12.0119 	INFO 	keyboard.Keyboard is using ptb backend.
+12.0123 	EXP 	Created text_quest = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Courier New', fontFiles=[], height=22, italic=False, languageStyle='LTR', name='text_quest', opacity=1, ori=0, pos=array([  0., 100.]), rgb=UNKNOWN, text='', units='pix', win=Window(...), wrapWidth=800)
+12.0127 	EXP 	Created text_ans_1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Courier New', fontFiles=[], height=22, italic=False, languageStyle='LTR', name='text_ans_1', opacity=1, ori=0, pos=array([ 0., 50.]), rgb=UNKNOWN, text='', units='pix', win=Window(...), wrapWidth=700)
+12.0131 	EXP 	Created text_ans_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Courier New', fontFiles=[], height=22, italic=False, languageStyle='LTR', name='text_ans_2', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='pix', win=Window(...), wrapWidth=700)
+12.0131 	INFO 	keyboard.Keyboard is using ptb backend.
+12.0167 	EXP 	Created text_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Courier New', fontFiles=[], height=22, italic=False, languageStyle='LTR', name='text_end', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='Thanks!', units='pix', win=Window(...), wrapWidth=500)
+12.0171 	EXP 	window1: mouseVisible = True
+12.0510 	EXP 	text_instruc: alignText = 'left'
+12.0510 	EXP 	text_instruc: autoDraw = True
+12.0510 	EXP 	text_instruc: text = 'Dear participant,\n\nDuring the following experiment we will record your eye movements while you are reading ten simple sentences. Before we can start we will have to calibrate the eye tracker. For this purpose you will have to follow the little point that will appear at various positions of the screen. Please direct your gaze at the point until it disappears. It is not important that you do this quickly but it is crucial that you do this as accurately as possible. \n\n1.) Before each trial a little dot will appear at the left side of the screen. Please look at it and press the space bar as soon as you are ready; the sentence will appear.  \n\n2.) Read the sentence at your usual reading speed and fixate the dot at the right side of the screen. Press the space bar again to indicate that you have finished reading.\n\n3.) A very simple question concerning the content of the sentence will appear. For option a) press the arrow key left; for option b) press the arrow key right.\n\nPress the space bar to start the experiment.'
+29.2203 	EXP 	window1: mouseVisible = False
+29.2204 	INFO 	Mouse: using default window
+29.2204 	EXP 	window1: mouseVisible = False
+29.7477 	DATA 	Keypress: space
+29.8650 	EXP 	text_instruc: autoDraw = False
+30.9270 	DATA 	Keypress: return
+31.4296 	DATA 	Keypress: return
+33.3428 	DATA 	Keypress: return
+36.2149 	DATA 	Keypress: return
+37.0708 	DATA 	Keypress: c
+38.1910 	DATA 	Keypress: space
+47.1427 	DATA 	Keypress: return
+47.9585 	DATA 	Keypress: v
+49.1029 	DATA 	Keypress: space
+50.7108 	DATA 	Keypress: return
+69.8943 	DATA 	Keypress: return
+70.9981 	DATA 	Keypress: return
+72.9903 	DATA 	Keypress: o
+72.9962 	EXP 	window1: units = 'pix'
+73.0123 	DEBUG 	Read excel file with openpyxl: example_sentences.xlsx
+73.0133 	EXP 	Imported example_sentences.xlsx as conditions, 10 conditions, 5 params
+73.0137 	EXP 	Created sequence: random, trialTypes=10, nReps=1, seed=None
+73.0139 	EXP 	New trial (rep=0, index=0): {'trial_index_var': 1, 'sent_var': "Tom's father used to go fishing with his kids until they became vegetarian.", 'quest_var': 'The kids went: ', 'ans_1_var': 'a) fishing.', 'ans_2_var': 'b) hiking.'}
+74.6541 	DATA 	Keypress: space
+74.7728 	EXP 	window1: units = 'pix'
+74.9239 	EXP 	text_sent: text = "Tom's father used to go fishing with his kids until they became vegetarian."
+74.9239 	EXP 	text_sent: alignText = 'left'
+74.9239 	EXP 	text_sent: autoDraw = True
+74.9239 	EXP 	fix_end_point: autoDraw = True
+74.9239 	EXP 	text_sent: text = "Tom's father used to go fishing with his kids until they became vegetarian."
+79.5519 	DATA 	Keypress: space
+79.5552 	EXP 	text_sent: autoDraw = False
+79.5552 	EXP 	fix_end_point: autoDraw = False
+79.5552 	EXP 	text_quest: text = 'The kids went: '
+79.5552 	EXP 	text_ans_1: text = 'a) fishing.'
+79.5552 	EXP 	text_ans_2: text = 'b) hiking.'
+79.5552 	EXP 	text_quest: alignText = 'left'
+79.5552 	EXP 	text_ans_1: alignText = 'left'
+79.5552 	EXP 	text_ans_2: alignText = 'left'
+79.5552 	EXP 	text_quest: autoDraw = True
+79.5552 	EXP 	text_ans_1: autoDraw = True
+79.5552 	EXP 	text_ans_2: autoDraw = True
+79.5552 	EXP 	text_quest: text = 'The kids went: '
+79.5552 	EXP 	text_ans_1: text = 'a) fishing.'
+79.5552 	EXP 	text_ans_2: text = 'b) hiking.'
+80.6119 	EXP 	New trial (rep=0, index=1): {'trial_index_var': 8, 'sent_var': 'Mark and Shelley found an apartment in one of the fancy neighborhoods of London.', 'quest_var': 'The neighborhood is:', 'ans_1_var': 'a) shabby.', 'ans_2_var': 'b) fancy.'}
+81.1112 	DATA 	Keypress: left
+81.5927 	EXP 	text_quest: autoDraw = False
+81.5927 	EXP 	text_ans_1: autoDraw = False
+81.5927 	EXP 	text_ans_2: autoDraw = False
+83.7262 	DATA 	Keypress: space
+83.7573 	EXP 	window1: units = 'pix'
+83.9066 	EXP 	text_sent: text = 'Mark and Shelley found an apartment in one of the fancy neighborhoods of London.'
+83.9066 	EXP 	text_sent: alignText = 'left'
+83.9066 	EXP 	text_sent: autoDraw = True
+83.9066 	EXP 	fix_end_point: autoDraw = True
+83.9066 	EXP 	text_sent: text = 'Mark and Shelley found an apartment in one of the fancy neighborhoods of London.'
+88.3679 	DATA 	Keypress: space
+88.3718 	EXP 	text_sent: autoDraw = False
+88.3718 	EXP 	fix_end_point: autoDraw = False
+88.3718 	EXP 	text_quest: text = 'The neighborhood is:'
+88.3718 	EXP 	text_ans_1: text = 'a) shabby.'
+88.3718 	EXP 	text_ans_2: text = 'b) fancy.'
+88.3718 	EXP 	text_quest: alignText = 'left'
+88.3718 	EXP 	text_ans_1: alignText = 'left'
+88.3718 	EXP 	text_ans_2: alignText = 'left'
+88.3718 	EXP 	text_quest: autoDraw = True
+88.3718 	EXP 	text_ans_1: autoDraw = True
+88.3718 	EXP 	text_ans_2: autoDraw = True
+88.3718 	EXP 	text_quest: text = 'The neighborhood is:'
+88.3718 	EXP 	text_ans_1: text = 'a) shabby.'
+88.3718 	EXP 	text_ans_2: text = 'b) fancy.'
+89.4898 	EXP 	New trial (rep=0, index=2): {'trial_index_var': 10, 'sent_var': 'They observed that fathers of daughters show a tendency for protective behavior.', 'quest_var': 'Who shows protective behavior?', 'ans_1_var': 'a) Fathers.', 'ans_2_var': 'b) Mothers.'}
+89.9892 	DATA 	Keypress: right
+90.4720 	EXP 	text_quest: autoDraw = False
+90.4720 	EXP 	text_ans_1: autoDraw = False
+90.4720 	EXP 	text_ans_2: autoDraw = False
+92.5178 	DATA 	Keypress: space
+92.5571 	EXP 	window1: units = 'pix'
+92.7071 	EXP 	text_sent: text = 'They observed that fathers of daughters show a tendency for protective behavior.'
+92.7071 	EXP 	text_sent: alignText = 'left'
+92.7071 	EXP 	text_sent: autoDraw = True
+92.7071 	EXP 	fix_end_point: autoDraw = True
+92.7071 	EXP 	text_sent: text = 'They observed that fathers of daughters show a tendency for protective behavior.'
+97.6624 	DATA 	Keypress: space
+97.6884 	EXP 	text_sent: autoDraw = False
+97.6884 	EXP 	fix_end_point: autoDraw = False
+97.6884 	EXP 	text_quest: text = 'Who shows protective behavior?'
+97.6884 	EXP 	text_ans_1: text = 'a) Fathers.'
+97.6884 	EXP 	text_ans_2: text = 'b) Mothers.'
+97.6884 	EXP 	text_quest: alignText = 'left'
+97.6884 	EXP 	text_ans_1: alignText = 'left'
+97.6884 	EXP 	text_ans_2: alignText = 'left'
+97.6884 	EXP 	text_quest: autoDraw = True
+97.6884 	EXP 	text_ans_1: autoDraw = True
+97.6884 	EXP 	text_ans_2: autoDraw = True
+97.6884 	EXP 	text_quest: text = 'Who shows protective behavior?'
+97.6884 	EXP 	text_ans_1: text = 'a) Fathers.'
+97.6884 	EXP 	text_ans_2: text = 'b) Mothers.'
+99.6549 	EXP 	New trial (rep=0, index=3): {'trial_index_var': 9, 'sent_var': "Long term unemployment can damage a person's self esteem, particularly for young people. ", 'quest_var': "Young people's self-esteem is:", 'ans_1_var': 'a) easily damaged.', 'ans_2_var': 'b) indestructible.'}
+100.1552 	DATA 	Keypress: left
+100.6355 	EXP 	text_quest: autoDraw = False
+100.6355 	EXP 	text_ans_1: autoDraw = False
+100.6355 	EXP 	text_ans_2: autoDraw = False
+102.7656 	DATA 	Keypress: space
+102.8080 	EXP 	window1: units = 'pix'
+102.9577 	EXP 	text_sent: text = "Long term unemployment can damage a person's self esteem, particularly for young people. "
+102.9577 	EXP 	text_sent: alignText = 'left'
+102.9577 	EXP 	text_sent: autoDraw = True
+102.9577 	EXP 	fix_end_point: autoDraw = True
+102.9577 	EXP 	text_sent: text = "Long term unemployment can damage a person's self esteem, particularly for young people. "
+108.1893 	DATA 	Keypress: space
+108.1926 	EXP 	text_sent: autoDraw = False
+108.1926 	EXP 	fix_end_point: autoDraw = False
+108.1926 	EXP 	text_quest: text = "Young people's self-esteem is:"
+108.1926 	EXP 	text_ans_1: text = 'a) easily damaged.'
+108.1926 	EXP 	text_ans_2: text = 'b) indestructible.'
+108.1926 	EXP 	text_quest: alignText = 'left'
+108.1926 	EXP 	text_ans_1: alignText = 'left'
+108.1926 	EXP 	text_ans_2: alignText = 'left'
+108.1926 	EXP 	text_quest: autoDraw = True
+108.1926 	EXP 	text_ans_1: autoDraw = True
+108.1926 	EXP 	text_ans_2: autoDraw = True
+108.1926 	EXP 	text_quest: text = "Young people's self-esteem is:"
+108.1926 	EXP 	text_ans_1: text = 'a) easily damaged.'
+108.1926 	EXP 	text_ans_2: text = 'b) indestructible.'
+110.6944 	DATA 	Keypress: left
+110.7313 	EXP 	New trial (rep=0, index=4): {'trial_index_var': 4, 'sent_var': "Even as Joe's drug addiction became obvious, he denied having a problem.", 'quest_var': 'Did Joe go to rehab?', 'ans_1_var': 'a) Yes.', 'ans_2_var': 'b) No.'}
+111.7097 	EXP 	text_quest: autoDraw = False
+111.7097 	EXP 	text_ans_1: autoDraw = False
+111.7097 	EXP 	text_ans_2: autoDraw = False
+113.3575 	DATA 	Keypress: space
+113.3924 	EXP 	window1: units = 'pix'
+113.5422 	EXP 	text_sent: text = "Even as Joe's drug addiction became obvious, he denied having a problem."
+113.5422 	EXP 	text_sent: alignText = 'left'
+113.5422 	EXP 	text_sent: autoDraw = True
+113.5422 	EXP 	fix_end_point: autoDraw = True
+113.5422 	EXP 	text_sent: text = "Even as Joe's drug addiction became obvious, he denied having a problem."
+118.6336 	DATA 	Keypress: space
+118.6419 	EXP 	text_sent: autoDraw = False
+118.6419 	EXP 	fix_end_point: autoDraw = False
+118.6419 	EXP 	text_quest: text = 'Did Joe go to rehab?'
+118.6419 	EXP 	text_ans_1: text = 'a) Yes.'
+118.6419 	EXP 	text_ans_2: text = 'b) No.'
+118.6419 	EXP 	text_quest: alignText = 'left'
+118.6419 	EXP 	text_ans_1: alignText = 'left'
+118.6419 	EXP 	text_ans_2: alignText = 'left'
+118.6419 	EXP 	text_quest: autoDraw = True
+118.6419 	EXP 	text_ans_1: autoDraw = True
+118.6419 	EXP 	text_ans_2: autoDraw = True
+118.6419 	EXP 	text_quest: text = 'Did Joe go to rehab?'
+118.6419 	EXP 	text_ans_1: text = 'a) Yes.'
+118.6419 	EXP 	text_ans_2: text = 'b) No.'
+120.9229 	EXP 	New trial (rep=0, index=5): {'trial_index_var': 7, 'sent_var': 'Some say that the internet was initially created for sharing pictures of cute cats.', 'quest_var': 'What is your opinion? ', 'ans_1_var': 'a) No way, I am a dog person.', 'ans_2_var': 'b) True fact, cats rule the world. '}
+121.4232 	DATA 	Keypress: right
+121.8944 	EXP 	text_quest: autoDraw = False
+121.8944 	EXP 	text_ans_1: autoDraw = False
+121.8944 	EXP 	text_ans_2: autoDraw = False
+123.1413 	DATA 	Keypress: space
+123.1765 	EXP 	window1: units = 'pix'
+123.3254 	EXP 	text_sent: text = 'Some say that the internet was initially created for sharing pictures of cute cats.'
+123.3254 	EXP 	text_sent: alignText = 'left'
+123.3254 	EXP 	text_sent: autoDraw = True
+123.3254 	EXP 	fix_end_point: autoDraw = True
+123.3254 	EXP 	text_sent: text = 'Some say that the internet was initially created for sharing pictures of cute cats.'
+128.2035 	DATA 	Keypress: space
+128.2074 	EXP 	text_sent: autoDraw = False
+128.2074 	EXP 	fix_end_point: autoDraw = False
+128.2074 	EXP 	text_quest: text = 'What is your opinion? '
+128.2074 	EXP 	text_ans_1: text = 'a) No way, I am a dog person.'
+128.2074 	EXP 	text_ans_2: text = 'b) True fact, cats rule the world. '
+128.2074 	EXP 	text_quest: alignText = 'left'
+128.2074 	EXP 	text_ans_1: alignText = 'left'
+128.2074 	EXP 	text_ans_2: alignText = 'left'
+128.2074 	EXP 	text_quest: autoDraw = True
+128.2074 	EXP 	text_ans_1: autoDraw = True
+128.2074 	EXP 	text_ans_2: autoDraw = True
+128.2074 	EXP 	text_quest: text = 'What is your opinion? '
+128.2074 	EXP 	text_ans_1: text = 'a) No way, I am a dog person.'
+128.2074 	EXP 	text_ans_2: text = 'b) True fact, cats rule the world. '
+130.7138 	EXP 	New trial (rep=0, index=6): {'trial_index_var': 6, 'sent_var': 'After the terror attack, heavily armed soldiers patrolled the streets of Paris.', 'quest_var': 'Who was heavily armed?', 'ans_1_var': 'a) Policemen.', 'ans_2_var': 'b) Soldiers.'}
+131.2132 	DATA 	Keypress: right
+131.6905 	EXP 	text_quest: autoDraw = False
+131.6905 	EXP 	text_ans_1: autoDraw = False
+131.6905 	EXP 	text_ans_2: autoDraw = False
+133.1571 	DATA 	Keypress: space
+133.1923 	EXP 	window1: units = 'pix'
+133.3426 	EXP 	text_sent: text = 'After the terror attack, heavily armed soldiers patrolled the streets of Paris.'
+133.3426 	EXP 	text_sent: alignText = 'left'
+133.3426 	EXP 	text_sent: autoDraw = True
+133.3426 	EXP 	fix_end_point: autoDraw = True
+133.3426 	EXP 	text_sent: text = 'After the terror attack, heavily armed soldiers patrolled the streets of Paris.'
+138.7051 	DATA 	Keypress: space
+138.7084 	EXP 	text_sent: autoDraw = False
+138.7084 	EXP 	fix_end_point: autoDraw = False
+138.7084 	EXP 	text_quest: text = 'Who was heavily armed?'
+138.7084 	EXP 	text_ans_1: text = 'a) Policemen.'
+138.7084 	EXP 	text_ans_2: text = 'b) Soldiers.'
+138.7084 	EXP 	text_quest: alignText = 'left'
+138.7084 	EXP 	text_ans_1: alignText = 'left'
+138.7084 	EXP 	text_ans_2: alignText = 'left'
+138.7084 	EXP 	text_quest: autoDraw = True
+138.7084 	EXP 	text_ans_1: autoDraw = True
+138.7084 	EXP 	text_ans_2: autoDraw = True
+138.7084 	EXP 	text_quest: text = 'Who was heavily armed?'
+138.7084 	EXP 	text_ans_1: text = 'a) Policemen.'
+138.7084 	EXP 	text_ans_2: text = 'b) Soldiers.'
+140.1057 	EXP 	New trial (rep=0, index=7): {'trial_index_var': 3, 'sent_var': 'Several penguins escaped their cages in the zoo and went for a walk in the park.', 'quest_var': 'The penguins went to:', 'ans_1_var': 'a) a park.', 'ans_2_var': 'b) a lake.'}
+140.6052 	DATA 	Keypress: right
+141.1551 	EXP 	text_quest: autoDraw = False
+141.1551 	EXP 	text_ans_1: autoDraw = False
+141.1551 	EXP 	text_ans_2: autoDraw = False
+142.7490 	DATA 	Keypress: space
+143.5971 	DATA 	Keypress: space
+143.6434 	EXP 	window1: units = 'pix'
+143.7928 	EXP 	text_sent: text = 'Several penguins escaped their cages in the zoo and went for a walk in the park.'
+143.7928 	EXP 	text_sent: alignText = 'left'
+143.7928 	EXP 	text_sent: autoDraw = True
+143.7928 	EXP 	fix_end_point: autoDraw = True
+143.7928 	EXP 	text_sent: text = 'Several penguins escaped their cages in the zoo and went for a walk in the park.'
+150.0931 	DATA 	Keypress: space
+150.1274 	EXP 	text_sent: autoDraw = False
+150.1274 	EXP 	fix_end_point: autoDraw = False
+150.1274 	EXP 	text_quest: text = 'The penguins went to:'
+150.1274 	EXP 	text_ans_1: text = 'a) a park.'
+150.1274 	EXP 	text_ans_2: text = 'b) a lake.'
+150.1274 	EXP 	text_quest: alignText = 'left'
+150.1274 	EXP 	text_ans_1: alignText = 'left'
+150.1274 	EXP 	text_ans_2: alignText = 'left'
+150.1274 	EXP 	text_quest: autoDraw = True
+150.1274 	EXP 	text_ans_1: autoDraw = True
+150.1274 	EXP 	text_ans_2: autoDraw = True
+150.1274 	EXP 	text_quest: text = 'The penguins went to:'
+150.1274 	EXP 	text_ans_1: text = 'a) a park.'
+150.1274 	EXP 	text_ans_2: text = 'b) a lake.'
+152.8786 	EXP 	New trial (rep=0, index=8): {'trial_index_var': 2, 'sent_var': 'The strange old lady who usually feeds the cats suddenly disappeared.', 'quest_var': 'The old lady feeds:', 'ans_1_var': 'a) pigeons.', 'ans_2_var': 'b) cats.'}
+153.3782 	DATA 	Keypress: left
+153.8539 	EXP 	text_quest: autoDraw = False
+153.8539 	EXP 	text_ans_1: autoDraw = False
+153.8539 	EXP 	text_ans_2: autoDraw = False
+154.9488 	DATA 	Keypress: space
+155.7807 	DATA 	Keypress: space
+155.8273 	EXP 	window1: units = 'pix'
+155.9773 	EXP 	text_sent: text = 'The strange old lady who usually feeds the cats suddenly disappeared.'
+155.9773 	EXP 	text_sent: alignText = 'left'
+155.9773 	EXP 	text_sent: autoDraw = True
+155.9773 	EXP 	fix_end_point: autoDraw = True
+155.9773 	EXP 	text_sent: text = 'The strange old lady who usually feeds the cats suddenly disappeared.'
+160.7703 	DATA 	Keypress: space
+160.7765 	EXP 	text_sent: autoDraw = False
+160.7765 	EXP 	fix_end_point: autoDraw = False
+160.7765 	EXP 	text_quest: text = 'The old lady feeds:'
+160.7765 	EXP 	text_ans_1: text = 'a) pigeons.'
+160.7765 	EXP 	text_ans_2: text = 'b) cats.'
+160.7765 	EXP 	text_quest: alignText = 'left'
+160.7765 	EXP 	text_ans_1: alignText = 'left'
+160.7765 	EXP 	text_ans_2: alignText = 'left'
+160.7765 	EXP 	text_quest: autoDraw = True
+160.7765 	EXP 	text_ans_1: autoDraw = True
+160.7765 	EXP 	text_ans_2: autoDraw = True
+160.7765 	EXP 	text_quest: text = 'The old lady feeds:'
+160.7765 	EXP 	text_ans_1: text = 'a) pigeons.'
+160.7765 	EXP 	text_ans_2: text = 'b) cats.'
+162.4159 	EXP 	New trial (rep=0, index=9): {'trial_index_var': 5, 'sent_var': 'Although I really hated mathematics in school, I became a decent engineer. ', 'quest_var': 'I hated:', 'ans_1_var': 'a) math.', 'ans_2_var': 'b) physics.'}
+162.9162 	DATA 	Keypress: right
+163.3948 	EXP 	text_quest: autoDraw = False
+163.3948 	EXP 	text_ans_1: autoDraw = False
+163.3948 	EXP 	text_ans_2: autoDraw = False
+164.6767 	DATA 	Keypress: space
+164.7122 	EXP 	window1: units = 'pix'
+164.8611 	EXP 	text_sent: text = 'Although I really hated mathematics in school, I became a decent engineer. '
+164.8611 	EXP 	text_sent: alignText = 'left'
+164.8611 	EXP 	text_sent: autoDraw = True
+164.8611 	EXP 	fix_end_point: autoDraw = True
+164.8611 	EXP 	text_sent: text = 'Although I really hated mathematics in school, I became a decent engineer. '
+169.1533 	DATA 	Keypress: space
+169.1593 	EXP 	text_sent: autoDraw = False
+169.1593 	EXP 	fix_end_point: autoDraw = False
+169.1593 	EXP 	text_quest: text = 'I hated:'
+169.1593 	EXP 	text_ans_1: text = 'a) math.'
+169.1593 	EXP 	text_ans_2: text = 'b) physics.'
+169.1593 	EXP 	text_quest: alignText = 'left'
+169.1593 	EXP 	text_ans_1: alignText = 'left'
+169.1593 	EXP 	text_ans_2: alignText = 'left'
+169.1593 	EXP 	text_quest: autoDraw = True
+169.1593 	EXP 	text_ans_1: autoDraw = True
+169.1593 	EXP 	text_ans_2: autoDraw = True
+169.1593 	EXP 	text_quest: text = 'I hated:'
+169.1593 	EXP 	text_ans_1: text = 'a) math.'
+169.1593 	EXP 	text_ans_2: text = 'b) physics.'
+171.2583 	DATA 	Keypress: left
+171.2615 	EXP 	text_quest: autoDraw = False
+171.2615 	EXP 	text_ans_1: autoDraw = False
+171.2615 	EXP 	text_ans_2: autoDraw = False
+171.2615 	EXP 	text_end: autoDraw = True
+173.0524 	EXP 	text_end: autoDraw = False
+173.0524 	EXP 	text_end: autoDraw = False
+175.1183 	INFO 	saved data to 'C:\\Users\\idea\\Desktop\\exampleReadingExperimentPsychoPy\\data/example_reading_Angela_001.csv'
+175.1191 	INFO 	saved data to C:\Users\idea\Desktop\exampleReadingExperimentPsychoPy\data/example_reading_Angela_001.psydat
+175.1466 	EXP 	window1: mouseVisible = True
+175.1467 	DEBUG 	Saving data for example_reading ExperimentHandler

@@ -1,0 +1,161 @@
+11.0177 	INFO 	Loaded monitor calibration from ['2020_12_11 11:21']
+11.8518 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0.5, 0.5, 0.5]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001EF73CCD198>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001EF73EE5F28>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=-1, size=array([1680, 1050]), stencilBits=0, stereo=False, units='pix', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+11.8521 	EXP 	window1: mouseVisible = True
+11.8521 	EXP 	window1: recordFrameIntervals = False
+12.0181 	EXP 	window1: recordFrameIntervals = True
+12.2015 	DEBUG 	Screen (-1) actual frame rate measured at 60.00
+12.2015 	EXP 	window1: recordFrameIntervals = False
+12.5012 	INFO 	keyboard.Keyboard is using ptb backend.
+12.5410 	INFO 	Loaded monitor calibration from ['2020_12_11 11:21']
+13.8058 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=True, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0.5, 0.5, 0.5]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001EF73CCD198>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001EF5478D240>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1680, 1050]), stencilBits=8, stereo=False, units='pix', useFBO=False, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+13.8061 	EXP 	window1: mouseVisible = True
+13.8061 	EXP 	window1: mouseVisible = False
+13.8061 	EXP 	Added new global key event: shutdown
+13.9170 	EXP 	Created text_instruc = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Courier New', fontFiles=[], height=22, italic=False, languageStyle='LTR', name='text_instruc', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=1000)
+13.9171 	INFO 	keyboard.Keyboard is using ptb backend.
+13.9178 	EXP 	Created text_sent = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Courier New', fontFiles=[], height=22, italic=False, languageStyle='LTR', name='text_sent', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='pix', win=Window(...), wrapWidth=1520)
+13.9231 	EXP 	Created fix_end_point = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1.0, fillColor=array([0.5, 0.5, 0.5]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=5, name='fix_end_point', opacity=1, ori=0.0, pos=array([760.,   0.]), size=array([16., 16.]), units='pix', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.9231 	INFO 	keyboard.Keyboard is using ptb backend.
+13.9236 	EXP 	Created text_quest = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Courier New', fontFiles=[], height=22, italic=False, languageStyle='LTR', name='text_quest', opacity=1, ori=0, pos=array([  0., 100.]), rgb=UNKNOWN, text='', units='pix', win=Window(...), wrapWidth=800)
+13.9240 	EXP 	Created text_ans_1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Courier New', fontFiles=[], height=22, italic=False, languageStyle='LTR', name='text_ans_1', opacity=1, ori=0, pos=array([ 0., 50.]), rgb=UNKNOWN, text='', units='pix', win=Window(...), wrapWidth=700)
+13.9243 	EXP 	Created text_ans_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Courier New', fontFiles=[], height=22, italic=False, languageStyle='LTR', name='text_ans_2', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='pix', win=Window(...), wrapWidth=700)
+13.9243 	INFO 	keyboard.Keyboard is using ptb backend.
+13.9284 	EXP 	Created text_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Courier New', fontFiles=[], height=22, italic=False, languageStyle='LTR', name='text_end', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='Thanks!', units='pix', win=Window(...), wrapWidth=500)
+13.9288 	EXP 	window1: mouseVisible = True
+13.9607 	EXP 	text_instruc: alignText = 'left'
+13.9607 	EXP 	text_instruc: autoDraw = True
+13.9607 	EXP 	text_instruc: text = 'Dear participant,\n\nDuring the following experiment we will record your eye movements while you are reading ten simple sentences. Before we can start we will have to calibrate the eye tracker. For this purpose you will have to follow the little point that will appear at various positions of the screen. Please direct your gaze at the point until it disappears. It is not important that you do this quickly but it is crucial that you do this as accurately as possible. \n\n1.) Before each trial a little dot will appear at the left side of the screen. Please look at it and press the space bar as soon as you are ready; the sentence will appear.  \n\n2.) Read the sentence at your usual reading speed and fixate the dot at the right side of the screen. Press the space bar again to indicate that you have finished reading.\n\n3.) A very simple question concerning the content of the sentence will appear. For option a) press the arrow key left; for option b) press the arrow key right.\n\nPress the space bar to start the experiment.'
+17.5892 	EXP 	window1: mouseVisible = False
+17.5892 	INFO 	Mouse: using default window
+17.5892 	EXP 	window1: mouseVisible = False
+18.1168 	DATA 	Keypress: space
+18.2347 	EXP 	text_instruc: autoDraw = False
+18.9558 	DATA 	Keypress: space
+20.0918 	DATA 	Keypress: return
+21.3957 	DATA 	Keypress: c
+22.1317 	DATA 	Keypress: return
+22.7236 	DATA 	Keypress: return
+23.5316 	DATA 	Keypress: return
+34.4996 	DATA 	Keypress: v
+35.3554 	DATA 	Keypress: space
+43.4195 	DATA 	Keypress: return
+44.7953 	DATA 	Keypress: o
+44.8014 	EXP 	window1: units = 'pix'
+44.8152 	DEBUG 	Read excel file with openpyxl: example_sentences.xlsx
+44.8161 	EXP 	Imported example_sentences.xlsx as conditions, 10 conditions, 5 params
+44.8165 	EXP 	Created sequence: random, trialTypes=10, nReps=1, seed=None
+44.8167 	EXP 	New trial (rep=0, index=0): {'trial_index_var': 5, 'sent_var': 'Although I really hated mathematics in school, I became a decent engineer. ', 'quest_var': 'I hated:', 'ans_1_var': 'a) math.', 'ans_2_var': 'b) physics.'}
+46.3313 	DATA 	Keypress: space
+46.3739 	EXP 	window1: units = 'pix'
+46.5210 	EXP 	text_sent: text = 'Although I really hated mathematics in school, I became a decent engineer. '
+46.5210 	EXP 	text_sent: alignText = 'left'
+46.5210 	EXP 	text_sent: autoDraw = True
+46.5210 	EXP 	fix_end_point: autoDraw = True
+46.5210 	EXP 	text_sent: text = 'Although I really hated mathematics in school, I became a decent engineer. '
+50.4366 	DATA 	Keypress: space
+50.4397 	EXP 	text_sent: autoDraw = False
+50.4397 	EXP 	fix_end_point: autoDraw = False
+50.4397 	EXP 	text_quest: text = 'I hated:'
+50.4397 	EXP 	text_ans_1: text = 'a) math.'
+50.4397 	EXP 	text_ans_2: text = 'b) physics.'
+50.4397 	EXP 	text_quest: alignText = 'left'
+50.4397 	EXP 	text_ans_1: alignText = 'left'
+50.4397 	EXP 	text_ans_2: alignText = 'left'
+50.4397 	EXP 	text_quest: autoDraw = True
+50.4397 	EXP 	text_ans_1: autoDraw = True
+50.4397 	EXP 	text_ans_2: autoDraw = True
+50.4397 	EXP 	text_quest: text = 'I hated:'
+50.4397 	EXP 	text_ans_1: text = 'a) math.'
+50.4397 	EXP 	text_ans_2: text = 'b) physics.'
+52.0783 	EXP 	New trial (rep=0, index=1): {'trial_index_var': 4, 'sent_var': "Even as Joe's drug addiction became obvious, he denied having a problem.", 'quest_var': 'Did Joe go to rehab?', 'ans_1_var': 'a) Yes.', 'ans_2_var': 'b) No.'}
+52.5783 	DATA 	Keypress: left
+53.0583 	EXP 	text_quest: autoDraw = False
+53.0583 	EXP 	text_ans_1: autoDraw = False
+53.0583 	EXP 	text_ans_2: autoDraw = False
+53.9152 	DATA 	Keypress: space
+53.9577 	EXP 	window1: units = 'pix'
+54.1075 	EXP 	text_sent: text = "Even as Joe's drug addiction became obvious, he denied having a problem."
+54.1075 	EXP 	text_sent: alignText = 'left'
+54.1075 	EXP 	text_sent: autoDraw = True
+54.1075 	EXP 	fix_end_point: autoDraw = True
+54.1075 	EXP 	text_sent: text = "Even as Joe's drug addiction became obvious, he denied having a problem."
+58.0375 	DATA 	Keypress: space
+58.0406 	EXP 	text_sent: autoDraw = False
+58.0406 	EXP 	fix_end_point: autoDraw = False
+58.0406 	EXP 	text_quest: text = 'Did Joe go to rehab?'
+58.0406 	EXP 	text_ans_1: text = 'a) Yes.'
+58.0406 	EXP 	text_ans_2: text = 'b) No.'
+58.0406 	EXP 	text_quest: alignText = 'left'
+58.0406 	EXP 	text_ans_1: alignText = 'left'
+58.0406 	EXP 	text_ans_2: alignText = 'left'
+58.0406 	EXP 	text_quest: autoDraw = True
+58.0406 	EXP 	text_ans_1: autoDraw = True
+58.0406 	EXP 	text_ans_2: autoDraw = True
+58.0406 	EXP 	text_quest: text = 'Did Joe go to rehab?'
+58.0406 	EXP 	text_ans_1: text = 'a) Yes.'
+58.0406 	EXP 	text_ans_2: text = 'b) No.'
+59.1891 	EXP 	New trial (rep=0, index=2): {'trial_index_var': 8, 'sent_var': 'Mark and Shelley found an apartment in one of the fancy neighborhoods of London.', 'quest_var': 'The neighborhood is:', 'ans_1_var': 'a) shabby.', 'ans_2_var': 'b) fancy.'}
+59.6893 	DATA 	Keypress: right
+60.1750 	EXP 	text_quest: autoDraw = False
+60.1750 	EXP 	text_ans_1: autoDraw = False
+60.1750 	EXP 	text_ans_2: autoDraw = False
+61.2030 	DATA 	Keypress: space
+61.2886 	EXP 	window1: units = 'pix'
+61.4415 	EXP 	text_sent: text = 'Mark and Shelley found an apartment in one of the fancy neighborhoods of London.'
+61.4415 	EXP 	text_sent: alignText = 'left'
+61.4415 	EXP 	text_sent: autoDraw = True
+61.4415 	EXP 	fix_end_point: autoDraw = True
+61.4415 	EXP 	text_sent: text = 'Mark and Shelley found an apartment in one of the fancy neighborhoods of London.'
+64.3033 	DATA 	Keypress: space
+64.3069 	EXP 	text_sent: autoDraw = False
+64.3069 	EXP 	fix_end_point: autoDraw = False
+64.3069 	EXP 	text_quest: text = 'The neighborhood is:'
+64.3069 	EXP 	text_ans_1: text = 'a) shabby.'
+64.3069 	EXP 	text_ans_2: text = 'b) fancy.'
+64.3069 	EXP 	text_quest: alignText = 'left'
+64.3069 	EXP 	text_ans_1: alignText = 'left'
+64.3069 	EXP 	text_ans_2: alignText = 'left'
+64.3069 	EXP 	text_quest: autoDraw = True
+64.3069 	EXP 	text_ans_1: autoDraw = True
+64.3069 	EXP 	text_ans_2: autoDraw = True
+64.3069 	EXP 	text_quest: text = 'The neighborhood is:'
+64.3069 	EXP 	text_ans_1: text = 'a) shabby.'
+64.3069 	EXP 	text_ans_2: text = 'b) fancy.'
+65.0463 	DATA 	Keypress: left
+65.0775 	EXP 	New trial (rep=0, index=3): {'trial_index_var': 3, 'sent_var': 'Several penguins escaped their cages in the zoo and went for a walk in the park.', 'quest_var': 'The penguins went to:', 'ans_1_var': 'a) a park.', 'ans_2_var': 'b) a lake.'}
+66.0501 	EXP 	text_quest: autoDraw = False
+66.0501 	EXP 	text_ans_1: autoDraw = False
+66.0501 	EXP 	text_ans_2: autoDraw = False
+66.9469 	DATA 	Keypress: space
+67.0418 	EXP 	window1: units = 'pix'
+67.1917 	EXP 	text_sent: text = 'Several penguins escaped their cages in the zoo and went for a walk in the park.'
+67.1917 	EXP 	text_sent: alignText = 'left'
+67.1917 	EXP 	text_sent: autoDraw = True
+67.1917 	EXP 	fix_end_point: autoDraw = True
+67.1917 	EXP 	text_sent: text = 'Several penguins escaped their cages in the zoo and went for a walk in the park.'
+70.1382 	DATA 	Keypress: space
+70.1414 	EXP 	text_sent: autoDraw = False
+70.1414 	EXP 	fix_end_point: autoDraw = False
+70.1414 	EXP 	text_quest: text = 'The penguins went to:'
+70.1414 	EXP 	text_ans_1: text = 'a) a park.'
+70.1414 	EXP 	text_ans_2: text = 'b) a lake.'
+70.1414 	EXP 	text_quest: alignText = 'left'
+70.1414 	EXP 	text_ans_1: alignText = 'left'
+70.1414 	EXP 	text_ans_2: alignText = 'left'
+70.1414 	EXP 	text_quest: autoDraw = True
+70.1414 	EXP 	text_ans_1: autoDraw = True
+70.1414 	EXP 	text_ans_2: autoDraw = True
+70.1414 	EXP 	text_quest: text = 'The penguins went to:'
+70.1414 	EXP 	text_ans_1: text = 'a) a park.'
+70.1414 	EXP 	text_ans_2: text = 'b) a lake.'
+71.7273 	EXP 	New trial (rep=0, index=4): {'trial_index_var': 6, 'sent_var': 'After the terror attack, heavily armed soldiers patrolled the streets of Paris.', 'quest_var': 'Who was heavily armed?', 'ans_1_var': 'a) Policemen.', 'ans_2_var': 'b) Soldiers.'}
+72.2273 	DATA 	Keypress: left
+72.7028 	EXP 	text_quest: autoDraw = False
+72.7028 	EXP 	text_ans_1: autoDraw = False
+72.7028 	EXP 	text_ans_2: autoDraw = False
+74.2107 	DATA 	Keypress: q
+74.2108 	EXP 	Global key event: shutdown. Calling <function shutDownFunc at 0x000001EF54793EA0>.
+76.0052 	EXP 	window1: mouseVisible = True
+76.0054 	DEBUG 	Saving data for example_reading ExperimentHandler
+76.0067 	INFO 	saved data to C:\Users\idea\Desktop\exampleReadingExperimentPsychoPy\data/example_reading_Willy_004.psydat
+76.0078 	INFO 	saved data to 'C:\\Users\\idea\\Desktop\\exampleReadingExperimentPsychoPy\\data/example_reading_Willy_004.csv'
